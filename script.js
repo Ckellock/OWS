@@ -18,20 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add some interactive effects
-    const planet = document.querySelector('.planet');
-    
-    // Add mouse move parallax effect
-    document.addEventListener('mousemove', function(e) {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        const moveX = (mouseX - 0.5) * 20;
-        const moveY = (mouseY - 0.5) * 20;
-        
-        planet.style.transform = `translate(${moveX}px, ${moveY}px)`;
-    });
-    
     // Radix UI button accessibility enhancements
     productButton.setAttribute('role', 'button');
     productButton.setAttribute('tabindex', '0');
