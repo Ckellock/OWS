@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other World Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Radix UI Primitives -->
+    <script src="https://unpkg.com/@radix-ui/react-primitives@latest/dist/index.umd.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="company-title">Other World Studios</h1>
+        </header>
+        
+        <main>
+            <div class="planet-container">
+                <div class="planet">
+                    <div class="planet-surface"></div>
+                    <div class="planet-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                    <div class="planet-glow"></div>
+                </div>
+            </div>
+            
+            <section class="product-section">
+                <h2>Our Product</h2>
+                <div class="product-card" role="article">
+                    <p class="product-description">Check out our latest offering</p>
+                    <button class="radix-button" id="productLink" role="button" aria-label="View Product">
+                        <span>View Product</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 Other World Studios. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
