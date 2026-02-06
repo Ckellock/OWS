@@ -469,6 +469,24 @@ header {
     opacity: 1;
 }
 
+.form-confirmation {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(100, 180, 100, 0.15);
+    border: 1px solid rgba(100, 200, 100, 0.4);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+}
+
+.form-confirmation p {
+    margin: 0;
+}
+
+.form-confirmation strong {
+    color: #9f9;
+}
+
 .contact-form {
     text-align: left;
     margin-top: 1.5rem;
