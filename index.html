@@ -14,7 +14,12 @@
 <body>
     <nav class="navbar">
         <a href="index.html" class="nav-logo">Other World Studios</a>
-        <ul class="nav-links">
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="navMenu">
             <li><a href="index.html">Home</a></li>
             <!-- About and Our Work hidden for now
             <li><a href="about.html">About</a></li>
@@ -43,6 +48,16 @@
         <div class="satellite satellite-3"></div>
     </div>
 
+    <section class="services-section" aria-labelledby="services-heading">
+        <h2 id="services-heading" class="services-heading">What we do</h2>
+        <ul class="services-list">
+            <li><span class="services-item">AI business consulting</span></li>
+            <li><span class="services-item">Web design</span></li>
+            <li><span class="services-item">Social media marketing</span></li>
+            <li><span class="services-item">AI automation</span></li>
+        </ul>
+    </section>
+
     <div class="container">
         <header>
             <h1 class="company-title">Other World Studios</h1>
@@ -50,14 +65,7 @@
         
         <main>
             <section class="product-section">
-                <h2>What we do</h2>
                 <div class="product-card" role="article">
-                    <ul class="services-list">
-                        <li>AI business consulting</li>
-                        <li>Web design</li>
-                        <li>Social media marketing</li>
-                        <li>AI automation</li>
-                    </ul>
                     <p class="product-description">Contact us today to learn more.</p>
                     <a href="mailto:otherworldstudios@protonmail.com" class="radix-button" id="contactLink" aria-label="Contact us by email">
                         <span>Contact us</span>

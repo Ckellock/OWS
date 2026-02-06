@@ -101,6 +101,48 @@ body::before {
     letter-spacing: 0.5px;
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -119,6 +161,51 @@ body::before {
 
 .nav-links a:hover {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        order: 1;
+    }
+
+    .nav-links {
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s, padding 0.2s ease;
+    }
+
+    .nav-links.is-open {
+        max-height: 200px;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 1rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
 }
 
 /* Full-screen planet horizon (top curve under title) */
@@ -420,26 +507,69 @@ header {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-.services-list {
-    list-style: none;
-    margin: 0 0 1.25rem 0;
-    padding: 0;
+.services-section {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 3rem 2rem 2.5rem;
     text-align: center;
 }
 
-.services-list li {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.95);
-    padding: 0.35rem 0;
-    position: relative;
-    padding-left: 1.25rem;
+.services-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 1.5rem 0;
 }
 
-.services-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.6);
+.services-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 3rem;
+    text-align: left;
+}
+
+.services-list li {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    letter-spacing: 0.02em;
+}
+
+.services-list li:nth-child(n+3) {
+    border-bottom: none;
+}
+
+.services-item {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .services-section {
+        padding: 2.5rem 1.5rem 2rem;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+
+    .services-list li:nth-child(n+3) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .services-list li:last-child {
+        border-bottom: none;
+    }
 }
 
 .product-description {
@@ -616,13 +746,7 @@ footer {
 /* Responsive design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 1rem;
         padding: 1rem;
-    }
-
-    .nav-links {
-        gap: 1.5rem;
     }
 
     .planet-horizon-wrap {
