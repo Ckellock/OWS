@@ -1,32 +1,48 @@
-// Add your product link here
-const PRODUCT_LINK = 'https://example.com/your-product';
+const CONTACT_EMAIL = 'otherworldstudios@protonmail.com';
 
-// Set the product link when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    const productButton = document.getElementById('productLink');
-    
-    if (productButton && PRODUCT_LINK !== 'https://example.com/your-product') {
-        // Convert button to link
-        productButton.addEventListener('click', function() {
-            window.open(PRODUCT_LINK, '_blank');
-        });
-    } else {
-        // If no link is set, show placeholder message
-        productButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Please update the PRODUCT_LINK in script.js with your actual product URL');
+    const contactLink = document.getElementById('contactLink');
+    if (contactLink) {
+        contactLink.setAttribute('tabindex', '0');
+        contactLink.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                contactLink.click();
+            }
         });
     }
-    
-    // Radix UI button accessibility enhancements
-    productButton.setAttribute('role', 'button');
-    productButton.setAttribute('tabindex', '0');
-    
-    // Keyboard support
-    productButton.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
+
+    // Copy email button
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyFeedback = document.getElementById('copyFeedback');
+    if (copyBtn && copyFeedback) {
+        copyBtn.addEventListener('click', function() {
+            navigator.clipboard.writeText(CONTACT_EMAIL).then(function() {
+                copyFeedback.textContent = 'Copied!';
+                copyFeedback.classList.add('visible');
+                setTimeout(function() {
+                    copyFeedback.textContent = '';
+                    copyFeedback.classList.remove('visible');
+                }, 2000);
+            }).catch(function() {
+                copyFeedback.textContent = 'Copy failed';
+                copyFeedback.classList.add('visible');
+            });
+        });
+    }
+
+    // Contact form: build mailto with subject and body
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            productButton.click();
-        }
-    });
+            var name = (document.getElementById('contactName') && document.getElementById('contactName').value) || '';
+            var email = (document.getElementById('contactFrom') && document.getElementById('contactFrom').value) || '';
+            var subject = (document.getElementById('contactSubject') && document.getElementById('contactSubject').value) || 'Message from Other World Studios site';
+            var message = (document.getElementById('contactMessage') && document.getElementById('contactMessage').value) || '';
+            var body = (name ? 'From: ' + name + '\n' : '') + (email ? 'Reply-To: ' + email + '\n\n' : '') + message;
+            var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+        });
+    }
 });

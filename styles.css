@@ -426,11 +426,105 @@ header {
     color: #e0e0e0;
 }
 
+.copy-email-row {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.copy-email-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.copy-email-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.copy-email-address {
+    margin-right: 0.5rem;
+}
+
+.copy-email-feedback {
+    font-size: 0.85rem;
+    color: #8f8;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.copy-email-feedback.visible {
+    opacity: 1;
+}
+
+.contact-form {
+    text-align: left;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.35rem;
+    margin-top: 0.75rem;
+}
+
+.contact-form label:first-child {
+    margin-top: 0;
+}
+
+.contact-input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-submit {
+    margin-top: 1.25rem;
+}
+
 /* Radix UI Button Styles */
 .radix-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     padding: 1rem 2.5rem;
     background: #ffffff;
     color: #000000;

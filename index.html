@@ -48,12 +48,31 @@
         
         <main>
             <section class="product-section">
-                <h2>Our Product</h2>
+                <h2>Contact us</h2>
                 <div class="product-card" role="article">
-                    <p class="product-description">Check out our latest offering</p>
-                    <button class="radix-button" id="productLink" role="button" aria-label="View Product">
-                        <span>View Product</span>
-                    </button>
+                    <p class="product-description">Get in touch with us.</p>
+                    <a href="mailto:otherworldstudios@protonmail.com" class="radix-button" id="contactLink" aria-label="Contact us by email">
+                        <span>Contact us</span>
+                    </a>
+                    <p class="copy-email-row">
+                        or copy email:
+                        <button type="button" class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
+                            <span class="copy-email-address">otherworldstudios@protonmail.com</span>
+                            <span class="copy-email-label" aria-hidden="true">Copy</span>
+                        </button>
+                        <span class="copy-email-feedback" id="copyFeedback" aria-live="polite"></span>
+                    </p>
+                    <form class="contact-form" id="contactForm">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" placeholder="Your name" class="contact-input">
+                        <label for="contactFrom">Your email</label>
+                        <input type="email" id="contactFrom" name="email" placeholder="your@email.com" class="contact-input" required>
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="subject" placeholder="Subject" class="contact-input">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="body" placeholder="Your message..." class="contact-input contact-textarea" rows="4" required></textarea>
+                        <button type="submit" class="radix-button contact-submit">Send via email</button>
+                    </form>
                 </div>
             </section>
         </main>
