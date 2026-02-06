@@ -444,13 +444,18 @@ body::before {
     }
 }
 
+/* Prevent navbar from covering in-page content */
+html {
+    scroll-padding-top: 5rem;
+}
+
 .container {
     position: relative;
     z-index: 1;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 6rem 2rem 4rem;
+    padding: 6.5rem 2rem 4rem;
     text-align: center;
 }
 
@@ -511,7 +516,7 @@ header {
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: 3rem 2rem 2.5rem;
+    padding: 2rem 0 2.5rem;
     text-align: center;
 }
 
@@ -758,7 +763,7 @@ footer {
     }
 
     .container {
-        padding: 5rem 1rem 3rem;
+        padding: 6rem 1rem 3rem;
     }
 
     .product-section {
