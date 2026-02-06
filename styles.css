@@ -224,9 +224,9 @@ body::before {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 320vmax;
-    height: 320vmax;
-    margin-left: -160vmax;
+    width: 260vmax;
+    height: 260vmax;
+    margin-left: -130vmax;
     border-radius: 50%;
     background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 40%, #080808 100%);
     box-shadow:
@@ -755,7 +755,13 @@ footer {
     }
 
     .planet-horizon-wrap {
-        top: 28vh;
+        top: 30vh;
+    }
+
+    .planet-horizon {
+        width: 180vmax;
+        height: 180vmax;
+        margin-left: -90vmax;
     }
 
     .company-title {
