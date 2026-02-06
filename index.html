@@ -16,8 +16,10 @@
         <a href="index.html" class="nav-logo">Other World Studios</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <!-- About and Our Work hidden for now
             <li><a href="about.html">About</a></li>
             <li><a href="our-work.html">Our Work</a></li>
+            -->
         </ul>
     </nav>
 
@@ -48,9 +50,15 @@
         
         <main>
             <section class="product-section">
-                <h2>Contact us</h2>
+                <h2>What we do</h2>
                 <div class="product-card" role="article">
-                    <p class="product-description">Get in touch with us.</p>
+                    <ul class="services-list">
+                        <li>AI business consulting</li>
+                        <li>Web design</li>
+                        <li>Social media marketing</li>
+                        <li>AI automation</li>
+                    </ul>
+                    <p class="product-description">Contact us today to learn more.</p>
                     <a href="mailto:otherworldstudios@protonmail.com" class="radix-button" id="contactLink" aria-label="Contact us by email">
                         <span>Contact us</span>
                     </a>
@@ -62,20 +70,6 @@
                         </button>
                         <span class="copy-email-feedback" id="copyFeedback" aria-live="polite"></span>
                     </p>
-                    <div class="form-confirmation" id="formConfirmation" role="status" aria-live="polite" hidden>
-                        <p><strong>Thanks!</strong> Your email client should open with this message. If it didn’t, use the button above or copy our email.</p>
-                    </div>
-                    <form class="contact-form" id="contactForm">
-                        <label for="contactName">Name</label>
-                        <input type="text" id="contactName" name="name" placeholder="Your name" class="contact-input">
-                        <label for="contactFrom">Your email</label>
-                        <input type="email" id="contactFrom" name="email" placeholder="your@email.com" class="contact-input" required>
-                        <label for="contactSubject">Subject</label>
-                        <input type="text" id="contactSubject" name="subject" placeholder="Subject" class="contact-input">
-                        <label for="contactMessage">Message</label>
-                        <textarea id="contactMessage" name="body" placeholder="Your message..." class="contact-input contact-textarea" rows="4" required></textarea>
-                        <button type="submit" class="radix-button contact-submit" id="contactSubmitBtn">Send via email</button>
-                    </form>
                 </div>
             </section>
         </main>

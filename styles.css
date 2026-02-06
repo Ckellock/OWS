@@ -420,9 +420,31 @@ header {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+.services-list {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding: 0;
+    text-align: center;
+}
+
+.services-list li {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 0.35rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.services-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .product-description {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: #e0e0e0;
 }
 
