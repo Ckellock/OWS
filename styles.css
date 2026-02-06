@@ -166,16 +166,16 @@ body::before {
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
-        order: 2;
+        order: 1;
     }
 
     .navbar {
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
     .nav-logo {
-        order: 1;
+        display: none;
     }
 
     .nav-links {
