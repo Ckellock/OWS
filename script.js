@@ -1,7 +1,47 @@
 const CONTACT_EMAIL = 'otherworldstudios@protonmail.com';
 
+function copyEmailToClipboard() {
+    var feedback = document.getElementById('copyFeedback');
+    function showResult(msg) {
+        if (feedback) {
+            feedback.textContent = msg;
+            feedback.classList.add('visible');
+            setTimeout(function() {
+                feedback.textContent = '';
+                feedback.classList.remove('visible');
+            }, 2500);
+        }
+    }
+    function fallbackCopy() {
+        var textarea = document.createElement('textarea');
+        textarea.value = CONTACT_EMAIL;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        textarea.style.top = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            var ok = document.execCommand('copy');
+            showResult(ok ? 'Copied!' : 'Copy failed');
+        } catch (e) {
+            showResult('Copy failed');
+        }
+        document.body.removeChild(textarea);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(CONTACT_EMAIL).then(function() {
+            showResult('Copied!');
+        }).catch(function() {
+            fallbackCopy();
+        });
+    } else {
+        fallbackCopy();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    const contactLink = document.getElementById('contactLink');
+    var contactLink = document.getElementById('contactLink');
     if (contactLink) {
         contactLink.setAttribute('tabindex', '0');
         contactLink.addEventListener('keydown', function(e) {
@@ -12,29 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Copy email button
-    const copyBtn = document.getElementById('copyEmailBtn');
-    const copyFeedback = document.getElementById('copyFeedback');
-    if (copyBtn && copyFeedback) {
+    var copyBtn = document.getElementById('copyEmailBtn');
+    if (copyBtn) {
         copyBtn.addEventListener('click', function() {
-            navigator.clipboard.writeText(CONTACT_EMAIL).then(function() {
-                copyFeedback.textContent = 'Copied!';
-                copyFeedback.classList.add('visible');
-                setTimeout(function() {
-                    copyFeedback.textContent = '';
-                    copyFeedback.classList.remove('visible');
-                }, 2000);
-            }).catch(function() {
-                copyFeedback.textContent = 'Copy failed';
-                copyFeedback.classList.add('visible');
-            });
+            copyEmailToClipboard();
         });
     }
 
-    // Contact form: build mailto, open it, then show confirmation
-    const form = document.getElementById('contactForm');
-    const formConfirmation = document.getElementById('formConfirmation');
-    if (form && formConfirmation) {
+    var form = document.getElementById('contactForm');
+    var formConfirmation = document.getElementById('formConfirmation');
+    if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -54,23 +81,28 @@ document.addEventListener('DOMContentLoaded', function() {
             if (message) bodyParts.push(message);
             var body = bodyParts.join('\n\n');
 
-            // Keep URL under ~2000 chars so mailto works everywhere
-            var maxBodyLen = 1500;
+            var maxBodyLen = 1200;
+            var maxSubjectLen = 200;
             if (body.length > maxBodyLen) body = body.substring(0, maxBodyLen) + '...';
+            if (subject.length > maxSubjectLen) subject = subject.substring(0, maxSubjectLen);
 
             var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
-            // Use a temporary link and click it (more reliable than location.href in some browsers)
-            var a = document.createElement('a');
-            a.href = mailto;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            try {
+                window.location.href = mailto;
+            } catch (err) {
+                var a = document.createElement('a');
+                a.href = mailto;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
 
-            // Show confirmation
-            formConfirmation.hidden = false;
-            formConfirmation.classList.add('visible');
-            form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (formConfirmation) {
+                formConfirmation.hidden = false;
+                formConfirmation.setAttribute('aria-hidden', 'false');
+                formConfirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         });
     }
 });
