@@ -172,6 +172,11 @@ body::before {
     .navbar {
         flex-wrap: wrap;
         justify-content: flex-end;
+        align-items: flex-start;
+        background: transparent;
+        backdrop-filter: none;
+        border-bottom: none;
+        padding: 1rem 1rem 0 0;
     }
 
     .nav-logo {
@@ -183,23 +188,33 @@ body::before {
         flex-basis: 100%;
         flex-direction: column;
         gap: 0;
-        padding: 1rem 0 0.5rem;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         visibility: hidden;
-        transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s, padding 0.2s ease;
+        transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: auto;
+        min-width: 140px;
+        position: absolute;
+        top: 100%;
+        right: 1rem;
     }
 
     .nav-links.is-open {
         max-height: 200px;
         opacity: 1;
         visibility: visible;
-        padding-top: 1rem;
+        padding: 0.5rem 0;
     }
 
     .nav-links li {
-        padding: 0.5rem 0;
+        padding: 0.5rem 1rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
