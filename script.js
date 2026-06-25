@@ -40,6 +40,45 @@ function copyEmailToClipboard() {
     }
 }
 
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var id = link.getAttribute('href');
+            if (id === '#') return;
+            var target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+}
+
+function initMobileCtaBar() {
+    var bar = document.getElementById('mobileCtaBar');
+    var contact = document.getElementById('contact');
+    if (!bar || !contact) return;
+
+    bar.setAttribute('aria-hidden', 'false');
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                bar.classList.remove('is-visible');
+            } else if (window.scrollY > 300) {
+                bar.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(contact);
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY <= 300) {
+            bar.classList.remove('is-visible');
+        }
+    }, { passive: true });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var contactLink = document.getElementById('contactLink');
     if (contactLink) {
@@ -75,4 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    initSmoothScroll();
+    initMobileCtaBar();
 });

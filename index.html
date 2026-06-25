@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other World Studios</title>
+    <meta name="description" content="Other World Studios — freelance digital agency for websites, AI automation, and paid ads. Same-day website delivery available. Google, Meta & Reddit Ads.">
+    <title>Other World Studios — Websites, AI & Paid Ads</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Radix UI Primitives -->
-    <script src="https://unpkg.com/@radix-ui/react-primitives@latest/dist/index.umd.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -20,21 +19,17 @@
             <span class="nav-toggle-bar"></span>
         </button>
         <ul class="nav-links" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <!-- About and Our Work hidden for now
-            <li><a href="about.html">About</a></li>
-            <li><a href="our-work.html">Our Work</a></li>
-            -->
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact" class="nav-cta">Get a quote</a></li>
         </ul>
     </nav>
 
     <div class="planet-horizon-wrap" aria-hidden="true">
         <div class="planet-horizon">
-            <!-- Continents -->
             <div class="continent continent-1"></div>
             <div class="continent continent-2"></div>
             <div class="continent continent-3"></div>
-            <!-- Cities (glowing dots) -->
             <div class="city city-1"></div>
             <div class="city city-2"></div>
             <div class="city city-3"></div>
@@ -42,36 +37,174 @@
             <div class="city city-5"></div>
             <div class="city city-6"></div>
         </div>
-        <!-- Satellites -->
         <div class="satellite satellite-1"></div>
         <div class="satellite satellite-2"></div>
         <div class="satellite satellite-3"></div>
     </div>
 
     <div class="container">
-        <header>
-            <h1 class="company-title">Other World Studios</h1>
+        <header class="hero">
+            <p class="hero-badge">Freelance digital agency · Same-day websites available</p>
+            <h1 class="company-title">Grow your business online — fast.</h1>
+            <p class="hero-subtitle">
+                Custom websites, AI automation, and paid ads that actually convert.
+                Work directly with a specialist — no agency overhead, no slow timelines.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="radix-button">Get a free quote</a>
+                <a href="#services" class="radix-button radix-button--outline">See services</a>
+            </div>
+            <ul class="trust-bar" aria-label="Key benefits">
+                <li><span class="trust-icon" aria-hidden="true">⚡</span> Same-day website delivery</li>
+                <li><span class="trust-icon" aria-hidden="true">🎯</span> Google, Meta & Reddit Ads</li>
+                <li><span class="trust-icon" aria-hidden="true">🤖</span> AI automation built for your workflow</li>
+            </ul>
         </header>
 
-        <section class="services-section" aria-labelledby="services-heading">
-            <h2 id="services-heading" class="services-heading">What we do</h2>
-            <ul class="services-list">
-                <li><span class="services-item">AI business consulting</span></li>
-                <li><span class="services-item">Web design</span></li>
-                <li><span class="services-item">Social media marketing</span></li>
-                <li><span class="services-item">AI automation</span></li>
-            </ul>
+        <section id="services" class="services-section" aria-labelledby="services-heading">
+            <h2 id="services-heading" class="section-heading">What we do</h2>
+            <p class="section-subheading">Everything you need to launch, grow, and automate — from one partner.</p>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3 class="service-title">Web Design & Development</h3>
+                    <p class="service-desc">High-converting, mobile-first websites built to turn visitors into customers. Need it yesterday? We offer same-day turnaround when you need to move fast.</p>
+                    <ul class="service-features">
+                        <li>Landing pages & full sites</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Same-day delivery available</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0 1 12 2z"/><path d="M8 6.5A4 4 0 0 0 12 10"/><path d="M16 6.5A4 4 0 0 1 12 10"/></svg>
+                    </div>
+                    <h3 class="service-title">AI Automation</h3>
+                    <p class="service-desc">Stop doing repetitive work manually. We build AI-powered workflows that save hours every week — chatbots, lead routing, content pipelines, and more.</p>
+                    <ul class="service-features">
+                        <li>Business process automation</li>
+                        <li>AI consulting & integration</li>
+                        <li>Custom tools for your team</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg>
+                    </div>
+                    <h3 class="service-title">Digital Marketing & Paid Ads</h3>
+                    <p class="service-desc">Reach the right people on the platforms that matter. We manage campaigns end-to-end so you get leads, not just impressions.</p>
+                    <ul class="service-features">
+                        <li>Google Ads (Search & Display)</li>
+                        <li>Meta Ads (Facebook & Instagram)</li>
+                        <li>Reddit Ads</li>
+                    </ul>
+                </article>
+            </div>
         </section>
-        
+
+        <section class="speed-section" aria-labelledby="speed-heading">
+            <div class="speed-card">
+                <h2 id="speed-heading" class="speed-title">Need a website today?</h2>
+                <p class="speed-desc">Most agencies take weeks. We can have your site live in hours — without cutting corners on design or performance. Tell us what you need and we'll make it happen.</p>
+                <a href="#contact" class="radix-button">Request same-day build</a>
+            </div>
+        </section>
+
+        <section id="process" class="process-section" aria-labelledby="process-heading">
+            <h2 id="process-heading" class="section-heading">How it works</h2>
+            <p class="section-subheading">Simple, direct, and built for busy business owners.</p>
+            <ol class="process-steps">
+                <li class="process-step">
+                    <span class="process-number">1</span>
+                    <div>
+                        <h3>Tell us your goals</h3>
+                        <p>Send a quick message about your project — website, ads, automation, or all three. No long intake forms.</p>
+                    </div>
+                </li>
+                <li class="process-step">
+                    <span class="process-number">2</span>
+                    <div>
+                        <h3>Get a clear plan & quote</h3>
+                        <p>We reply fast with scope, timeline, and pricing. You'll know exactly what you're getting before anything starts.</p>
+                    </div>
+                </li>
+                <li class="process-step">
+                    <span class="process-number">3</span>
+                    <div>
+                        <h3>Launch & optimize</h3>
+                        <p>We build, deploy, and iterate. Your site goes live, ads start running, or automations start saving you time — often within days.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="benefits-section" aria-labelledby="benefits-heading">
+            <h2 id="benefits-heading" class="section-heading">Why work with us</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Direct access</h3>
+                    <p>No account managers or middlemen. You work with the person actually doing the work.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Speed without sacrifice</h3>
+                    <p>Fast turnaround doesn't mean sloppy. Every deliverable is polished and built to perform.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Full-stack digital</h3>
+                    <p>Website, ads, and automation under one roof — so your marketing actually works together.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Conversion-focused</h3>
+                    <p>We design for results: more leads, more sales, less wasted ad spend.</p>
+                </div>
+            </div>
+        </section>
+
         <main>
-            <section class="product-section">
-                <div class="product-card" role="article">
-                    <p class="product-description">Contact us today to learn more.</p>
-                    <a href="mailto:otherworldstudios@protonmail.com" class="radix-button" id="contactLink" aria-label="Contact us by email">
-                        <span>Contact us</span>
+            <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+                <h2 id="contact-heading" class="section-heading">Let's build something</h2>
+                <p class="section-subheading">Free quote, fast reply. Tell us about your project and we'll get back to you within 24 hours — often much sooner.</p>
+                <div class="product-card contact-card" role="article">
+                    <div class="form-confirmation" data-fs-success role="status" aria-live="polite"></div>
+                    <div class="form-error" data-fs-error role="alert" aria-live="assertive"></div>
+
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeebazwd" method="POST">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" class="contact-input" placeholder="Your name" required autocomplete="name" data-fs-field>
+                        <span class="field-error" data-fs-error="name"></span>
+
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" class="contact-input" placeholder="you@company.com" required autocomplete="email" data-fs-field>
+                        <span class="field-error" data-fs-error="email"></span>
+
+                        <label for="contactService">What do you need?</label>
+                        <select id="contactService" name="service" class="contact-input contact-select" required data-fs-field>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="Website (standard)">Website design & development</option>
+                            <option value="Website (same-day)">Website — same-day delivery</option>
+                            <option value="AI automation">AI automation</option>
+                            <option value="Google Ads">Google Ads</option>
+                            <option value="Meta Ads">Meta Ads (Facebook / Instagram)</option>
+                            <option value="Reddit Ads">Reddit Ads</option>
+                            <option value="Multiple services">Multiple services</option>
+                        </select>
+                        <span class="field-error" data-fs-error="service"></span>
+
+                        <label for="contactMessage">Project details</label>
+                        <textarea id="contactMessage" name="message" class="contact-input contact-textarea" placeholder="Tell us about your business and what you're looking to achieve..." required rows="4" data-fs-field></textarea>
+                        <span class="field-error" data-fs-error="message"></span>
+
+                        <button type="submit" class="radix-button contact-submit" data-fs-submit-btn>Send message</button>
+                    </form>
+
+                    <div class="contact-divider"><span>or email directly</span></div>
+
+                    <a href="mailto:otherworldstudios@protonmail.com" class="radix-button radix-button--outline" id="contactLink" aria-label="Contact us by email">
+                        <span>otherworldstudios@protonmail.com</span>
                     </a>
                     <p class="copy-email-row">
-                        or copy email:
                         <button type="button" class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
                             <span class="copy-email-address">otherworldstudios@protonmail.com</span>
                             <span class="copy-email-label" aria-hidden="true">Copy</span>
@@ -81,12 +214,22 @@
                 </div>
             </section>
         </main>
-        
+
         <footer>
             <p>&copy; 2026 Other World Studios. All rights reserved.</p>
+            <p class="footer-tagline">Websites · AI Automation · Paid Ads</p>
         </footer>
     </div>
-    
-    <script src="script.js"></script>
+
+    <div class="mobile-cta-bar" id="mobileCtaBar" aria-hidden="true">
+        <a href="#contact" class="radix-button mobile-cta-btn">Get a free quote</a>
+    </div>
+
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contactForm', formId: 'xeebazwd' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
