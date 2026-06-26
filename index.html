@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -168,31 +169,25 @@
                 <h2 id="booking-heading" class="section-heading">Book a free discovery call</h2>
                 <p class="section-subheading">Pick a time that works for you — 15 minutes, no pressure. Syncs directly with Google Calendar.</p>
                 <div class="booking-card product-card">
-                    <div id="bookingEmbed" class="booking-embed" aria-label="Google Calendar booking widget"></div>
-                    <div id="bookingFallback" class="booking-fallback" hidden>
-                        <p class="booking-fallback-text" id="bookingFallbackText">Open our calendar to choose a time.</p>
-                        <a href="#" class="radix-button" id="bookingExternalLink" target="_blank" rel="noopener noreferrer">Open booking calendar</a>
+                    <div class="booking-button-wrap">
+                        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                        <script>
+                        (function() {
+                            var target = document.currentScript;
+                            window.addEventListener('load', function() {
+                                calendar.schedulingButton.load({
+                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1npa5qCLcJMilRCJHrlG8V5F4R9IZ12qGD0c9K-GM_cOgwbVT-lKt09-BAu4oV_K7EOxyx05l9?gv=true',
+                                    color: '#ffffff',
+                                    label: 'Book a free call',
+                                    target: target,
+                                });
+                            });
+                        })();
+                        </script>
                     </div>
-                    <p class="booking-note" id="bookingNote" hidden>
-                        Prefer email? <a href="#contact">Send us a message</a> instead.
+                    <p class="booking-note">
+                        Opens Google Calendar to pick a time · Prefer email? <a href="#contact">Send us a message</a>
                     </p>
-                    <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1npa5qCLcJMilRCJHrlG8V5F4R9IZ12qGD0c9K-GM_cOgwbVT-lKt09-BAu4oV_K7EOxyx05l9?gv=true',
-      color: '#616161',
-      label: 'Book an appointment',
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
                 </div>
             </section>
 

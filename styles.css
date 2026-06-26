@@ -834,48 +834,24 @@ header {
 }
 
 .booking-card {
-    max-width: 720px;
+    max-width: 520px;
     margin: 0 auto;
-    padding: 1.25rem;
+    padding: 2rem 1.5rem;
     text-align: center;
 }
 
-.booking-embed {
-    width: 100%;
-    min-height: 520px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.booking-embed:empty {
-    min-height: 0;
-}
-
-.booking-iframe {
-    display: block;
-    width: 100%;
-    height: 600px;
-    border: 0;
-    border-radius: 12px;
-    background: #fff;
-}
-
-.booking-fallback {
-    padding: 2rem 1rem;
-}
-
-.booking-fallback-text {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
+.booking-button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 52px;
 }
 
 .booking-note {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.45);
+    line-height: 1.5;
 }
 
 .booking-note a {
@@ -892,16 +868,6 @@ header {
     width: 100%;
     font-size: 0.95rem;
     padding: 0.85rem 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .booking-iframe {
-        height: 480px;
-    }
-
-    .booking-embed {
-        min-height: 480px;
-    }
 }
 
 /* Contact */

@@ -1,75 +1,5 @@
 const CONTACT_EMAIL = 'otherworldstudios@protonmail.com';
 
-/*
- * Google Calendar appointment scheduling
- * --------------------------------------
- * 1. Open Google Calendar → Create → Appointment schedule
- * 2. Set your availability, duration (e.g. 15 min), and video link (Google Meet)
- * 3. Click the schedule → Share → "Booking page" for bookingUrl
- * 4. Share → "Website embed" for embedUrl (append ?gv=true if not present)
- */
-const BOOKING_CONFIG = {
-    embedUrl: '',
-    bookingUrl: ''
-};
-
-function initBookingCalendar() {
-    var embedContainer = document.getElementById('bookingEmbed');
-    var fallback = document.getElementById('bookingFallback');
-    var fallbackText = document.getElementById('bookingFallbackText');
-    var externalLink = document.getElementById('bookingExternalLink');
-    var note = document.getElementById('bookingNote');
-    if (!embedContainer || !fallback) return;
-
-    var embedUrl = BOOKING_CONFIG.embedUrl.trim();
-    var bookingUrl = BOOKING_CONFIG.bookingUrl.trim();
-
-    if (embedUrl) {
-        if (embedUrl.indexOf('?') === -1) {
-            embedUrl += '?gv=true';
-        } else if (embedUrl.indexOf('gv=') === -1) {
-            embedUrl += '&gv=true';
-        }
-
-        var iframe = document.createElement('iframe');
-        iframe.src = embedUrl;
-        iframe.title = 'Book a call with Other World Studios';
-        iframe.className = 'booking-iframe';
-        iframe.loading = 'lazy';
-        iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-        embedContainer.appendChild(iframe);
-
-        if (bookingUrl && externalLink) {
-            externalLink.href = bookingUrl;
-            note.hidden = false;
-            note.innerHTML = 'Calendar not loading? <a href="' + bookingUrl + '" target="_blank" rel="noopener noreferrer">Open booking page</a> · Prefer email? <a href="#contact">Send a message</a>.';
-        } else if (note) {
-            note.hidden = false;
-        }
-        return;
-    }
-
-    embedContainer.hidden = true;
-
-    if (bookingUrl && externalLink) {
-        externalLink.href = bookingUrl;
-        fallback.hidden = false;
-        if (note) note.hidden = false;
-        return;
-    }
-
-    if (fallbackText) {
-        fallbackText.textContent = 'Calendar setup in progress — use the contact form below and we\u2019ll schedule a time.';
-    }
-    if (externalLink) {
-        externalLink.textContent = 'Send a message';
-        externalLink.href = '#contact';
-        externalLink.removeAttribute('target');
-        externalLink.removeAttribute('rel');
-    }
-    fallback.hidden = false;
-}
-
 function copyEmailToClipboard() {
     var feedback = document.getElementById('copyFeedback');
     function showResult(msg) {
@@ -187,5 +117,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initSmoothScroll();
     initMobileCtaBar();
-    initBookingCalendar();
 });
