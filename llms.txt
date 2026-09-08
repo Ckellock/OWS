@@ -2,10 +2,10 @@
 
 > Other World Studios is a Canadian digital agency offering web design, same-day websites, AI automation, Google Ads, Meta Ads, and Reddit Ads for businesses across Canada.
 
-- Home: https://ckellock.github.io/OWS/
-- About: https://ckellock.github.io/OWS/about.html
-- Contact: https://ckellock.github.io/OWS/#contact
-- Book a call: https://ckellock.github.io/OWS/#book-call
+- Home: https://www.otherworldstudios.ca/index.html
+- About: https://www.otherworldstudios.ca/about.html
+- Contact: https://www.otherworldstudios.ca/index.html#contact
+- Book a call: https://www.otherworldstudios.ca/index.html#contact
 - Email: otherworldstudios@protonmail.com
 
 ## Entity
@@ -14,7 +14,7 @@
 - Type: Independent digital agency / professional service
 - Country: Canada
 - Service model: Remote-first, Canada-wide
-- Founded: 2026
+- Founded: 2024
 - Languages: English
 
 ## Services
