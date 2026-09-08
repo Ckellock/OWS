@@ -1,0 +1,40 @@
+# Other World Studios
+
+> Other World Studios is a Canadian digital agency offering web design, same-day websites, AI automation, Google Ads, Meta Ads, and Reddit Ads for businesses across Canada.
+
+- Home: https://ckellock.github.io/OWS/
+- About: https://ckellock.github.io/OWS/about.html
+- Contact: https://ckellock.github.io/OWS/#contact
+- Book a call: https://ckellock.github.io/OWS/#book-call
+- Email: otherworldstudios@protonmail.com
+
+## Entity
+
+- Legal/brand name: Other World Studios
+- Type: Independent digital agency / professional service
+- Country: Canada
+- Service model: Remote-first, Canada-wide
+- Founded: 2026
+- Languages: English
+
+## Services
+
+1. Web design and website development (landing pages and full sites; mobile-first; same-day delivery available)
+2. AI automation and AI business consulting (workflows, chatbots, lead routing, custom tools)
+3. Digital marketing and paid ads: Google Ads (Search & Display), Meta Ads (Facebook & Instagram), Reddit Ads
+
+## Who it is for
+
+Canadian businesses that need converting websites, practical AI automation, or paid ads without large-agency overhead. Direct access to the person doing the work. Typical enquiry response under 24 hours.
+
+## Geographic coverage
+
+Canada nationwide, including British Columbia (Victoria, Greater Vancouver), Ontario, Alberta, Quebec, and other provinces and territories.
+
+## Proof of work (public client sites)
+
+- Wolf Pack Game Design — https://www.wolfpackgamedesign.com/
+- Rain Coast Print Shop — https://raincoastdigital.com/
+- Block Victoria — https://www.blockvictoria.ca/
+- Catering By Block — https://www.cateringinvictoria.com/
+- Drone Discovery — https://dronediscovery.ca/
