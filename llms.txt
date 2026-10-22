@@ -3,7 +3,7 @@
 > Other World Studios is a Canadian digital agency offering web design, same-day websites, AI automation, Google Ads, Meta Ads, and Reddit Ads for businesses across Canada.
 
 - Home: https://www.otherworldstudios.ca/
-- About: https://www.otherworldstudios.ca/about.html
+- About: https://www.otherworldstudios.ca/about/
 - Contact: https://www.otherworldstudios.ca/#contact
 - Book a call: https://www.otherworldstudios.ca/#book-call
 - Email: otherworldstudios@protonmail.com
