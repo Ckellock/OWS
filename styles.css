@@ -1189,6 +1189,23 @@ button { font-family: inherit; cursor: pointer; }
     border-bottom: 0;
 }
 
+.trade-page > section:not(.cta-band) {
+    margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.trade-page .section-title {
+    margin-bottom: 0.85rem;
+}
+
+.trade-page .section-lead {
+    margin: 0 0 1.25rem;
+    line-height: 1.65;
+}
+
+.trade-page .geo-pills {
+    margin: 0 0 1.5rem;
+}
+
 .trade-benefits {
     display: grid;
     grid-template-columns: 1fr;
