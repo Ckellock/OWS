@@ -4,6 +4,7 @@
 
 - Home: https://www.otherworldstudios.ca/
 - About: https://www.otherworldstudios.ca/about/
+- Websites for contractors, plumbers, and landscapers: https://www.otherworldstudios.ca/websites-for-contractors/
 - Contact: https://www.otherworldstudios.ca/#contact
 - Book a call: https://www.otherworldstudios.ca/#book-call
 - Email: otherworldstudios@protonmail.com
@@ -21,8 +22,9 @@
 ## Services
 
 1. Web design and website development (landing pages and full sites; mobile-first; same-day delivery available)
-2. AI automation and AI business consulting (workflows, chatbots, lead routing, custom tools)
-3. Digital marketing and paid ads: Google Ads (Search & Display), Meta Ads (Facebook & Instagram), Reddit Ads
+2. Website design for contractors and home-service businesses, including plumbers, landscapers, electricians, roofers, and HVAC companies
+3. AI automation and AI business consulting (workflows, chatbots, lead routing, custom tools)
+4. Digital marketing and paid ads: Google Ads (Search & Display), Meta Ads (Facebook & Instagram), Reddit Ads
 
 ## Who it is for
 

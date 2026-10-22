@@ -205,8 +205,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .menu-links {
+    display: grid;
+    gap: clamp(0.1rem, 0.4vh, 0.3rem);
     list-style: none;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .menu-links a {
@@ -215,7 +217,7 @@ button { font-family: inherit; cursor: pointer; }
     font-size: clamp(2rem, 8vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.03em;
-    padding: 0.35rem 0;
+    padding: 0.3rem 0;
     color: var(--text-dim);
     transition: color 0.25s;
 }
@@ -650,6 +652,12 @@ button { font-family: inherit; cursor: pointer; }
     max-width: 520px;
 }
 
+.service-content .service-detail-link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .service-content ul {
     list-style: none;
     display: flex;
@@ -986,7 +994,8 @@ button { font-family: inherit; cursor: pointer; }
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
 }
 
 .footer-nav a {
@@ -1079,6 +1088,7 @@ button { font-family: inherit; cursor: pointer; }
         grid-column: auto;
         flex-direction: column;
         align-items: flex-end;
+        row-gap: 1rem;
     }
 
     .mobile-cta-bar { display: none; }
@@ -1166,6 +1176,48 @@ button { font-family: inherit; cursor: pointer; }
 
 .about-prose {
     max-width: 760px;
+}
+
+.trade-page {
+    max-width: 900px;
+}
+
+.trade-page .page-hero {
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: 0;
+}
+
+.trade-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    margin: 2rem 0;
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.trade-benefit {
+    padding: 1.5rem;
+    background: var(--bg);
+}
+
+.trade-benefit h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.trade-benefit p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+    .trade-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .about-prose h2 {
