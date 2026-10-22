@@ -10,6 +10,9 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
@@ -31,6 +34,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Disallow: /our-work.html
-
-Sitemap: https://ckellock.github.io/OWS/sitemap.xml
+Sitemap: https://www.otherworldstudios.ca/sitemap.xml

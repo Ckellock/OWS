@@ -184,8 +184,10 @@ button { font-family: inherit; cursor: pointer; }
     z-index: 150;
     background: rgba(0, 0, 0, 0.97);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    overflow-y: auto;
+    padding: calc(var(--header-h) + 1.5rem) 0 2rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s var(--ease), visibility 0.4s;
@@ -199,6 +201,7 @@ button { font-family: inherit; cursor: pointer; }
 .site-menu-inner {
     text-align: center;
     padding: var(--pad);
+    width: 100%;
 }
 
 .menu-links {
